@@ -1,0 +1,26 @@
+digraph "CFG of function 14" {
+block2 [shape=none, color=black, label=<<table><tr><td colspan="2">Data block 2</td></tr><tr><td>14_1</td><td>i32.const 1</td></tr>|<tr><td>14_2</td><td>i32.eqz</td></tr></table>>];
+block3 [shape=none, color=black, label=<<table><tr><td colspan="2">Control block 3</td></tr><tr><td>14_3</td><td>br_if 0</td></tr></table>>];
+block5 [shape=none, color=black, label=<<table><tr><td colspan="2">Call block 5</td></tr><tr><td>14_4</td><td>call 6</td></tr></table>>];
+block7 [shape=none, color=black, label=<<table><tr><td colspan="2">Control block 7</td></tr><tr><td>m14_7</td><td>merge</td></tr></table>>];
+block9 [shape=none, color=black, label=<<table><tr><td colspan="2">Call block 9</td></tr><tr><td>14_5</td><td>call 15</td></tr></table>>];
+block11 [shape=none, color=black, label=<<table><tr><td colspan="2">Call block 11</td></tr><tr><td>14_6</td><td>call 18</td></tr></table>>];
+block13 [shape=none, color=black, label=<<table><tr><td colspan="2">Control block 13</td></tr><tr><td>14_7</td><td>unreachable</td></tr></table>>];
+block15 [shape=none, color=black, label=<<table><tr><td colspan="2">Control block 15</td></tr><tr><td>m14_15</td><td>merge</td></tr></table>>];
+block2 -> block3 [label=""];
+
+block3 -> block5 [label="f"];
+
+block3 -> block7 [label="t"];
+
+block5 -> block7 [label=""];
+
+block7 -> block9 [label=""];
+
+block9 -> block11 [label=""];
+
+block11 -> block13 [label=""];
+
+block13 -> block15 [label=""];
+
+}
