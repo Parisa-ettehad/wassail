@@ -1,0 +1,23 @@
+digraph "CPG (CFG+CDG+DDG)" {
+block2 -> block3 [color=black, label="CFG"];
+block3 -> block5 [color=black, label="CFG"];
+block3 -> block7 [color=black, label="CFG"];
+block5 -> block7 [color=black, label="CFG"];
+block7 -> block9 [color=black, label="CFG"];
+block9 -> block11 [color=black, label="CFG"];
+block11 -> block13 [color=black, label="CFG"];
+block13 -> block15 [color=black, label="CFG"];
+block5 -> block3 [color=green, label="CDG"];
+block2 -> block3 [color=red, label="DDG"];
+block3 -> block5 [color=red, label="DDG"];
+block3 -> block7 [color=red, label="DDG"];
+block5 -> block7 [color=red, label="DDG"];
+block7 -> block9 [color=red, label="DDG"];
+block9 -> block11 [color=red, label="DDG"];
+block11 -> block13 [color=red, label="DDG"];
+block13 -> block15 [color=red, label="DDG"];
+instr14_2 -> block2 [color=red, label="DDG"];
+instr14_3 -> block2 [color=red, label="DDG"];
+instr14_6 -> block9 [color=red, label="DDG"];
+block5 -> block3 [color=red, label="DDG"];
+}

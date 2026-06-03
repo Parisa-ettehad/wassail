@@ -15,4 +15,4 @@ cpg = {
 with open('cpg_combined.json', 'w') as f:
     json.dump(cpg, f, indent=2)
 
-print("✅ CPG JSON ساخته شد: cpg_combined.json")
+print("✅ CPG JSON created: cpg_combined.json")
