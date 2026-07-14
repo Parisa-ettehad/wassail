@@ -1,0 +1,23 @@
+{
+  "source": "uaf.wasm",
+  "method": {
+    "name": "bad",
+    "calls": [
+      {
+        "name": "malloc",
+        "code": "malloc(100)",
+        "order": 1
+      },
+      {
+        "name": "free",
+        "code": "free(data)",
+        "order": 2
+      },
+      {
+        "name": "memset",
+        "code": "memset(data, 'A', 100)",
+        "order": 3
+      }
+    ]
+  }
+}
