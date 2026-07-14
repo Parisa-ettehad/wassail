@@ -1,0 +1,21 @@
+digraph "CFG of function 2" {
+block0 [shape=none, color=black, label=<<table><tr><td colspan="2">Data block 0</td></tr><tr><td>2_0</td><td>global.get 0</td></tr>|<tr><td>2_1</td><td>i32.const 16</td></tr>|<tr><td>2_2</td><td>i32.sub</td></tr>|<tr><td>2_3</td><td>local.set 0</td></tr>|<tr><td>2_4</td><td>local.get 0</td></tr>|<tr><td>2_5</td><td>global.set 0</td></tr>|<tr><td>2_6</td><td>local.get 0</td></tr>|<tr><td>2_7</td><td>i32.const 100</td></tr></table>>];
+block1 [shape=none, color=black, label=<<table><tr><td colspan="2">Call block 1</td></tr><tr><td>2_8</td><td>call 0</td></tr></table>>];
+block2 [shape=none, color=black, label=<<table><tr><td colspan="2">Data block 2</td></tr><tr><td>2_9</td><td>i32.store offset=12</td></tr>|<tr><td>2_10</td><td>local.get 0</td></tr>|<tr><td>2_11</td><td>i32.load offset=12</td></tr></table>>];
+block3 [shape=none, color=black, label=<<table><tr><td colspan="2">Call block 3</td></tr><tr><td>2_12</td><td>call 1</td></tr></table>>];
+block4 [shape=none, color=black, label=<<table><tr><td colspan="2">Data block 4</td></tr><tr><td>2_13</td><td>local.get 0</td></tr>|<tr><td>2_14</td><td>i32.load offset=12</td></tr>|<tr><td>2_15</td><td>local.set 1</td></tr>|<tr><td>2_16</td><td>i32.const 100</td></tr>|<tr><td>2_17</td><td>local.set 2</td></tr>|<tr><td>2_18</td><td>local.get 1</td></tr>|<tr><td>2_19</td><td>i32.const 65</td></tr>|<tr><td>2_20</td><td>local.get 2</td></tr>|<tr><td>2_21</td><td>memory.fill</td></tr>|<tr><td>2_22</td><td>local.get 0</td></tr>|<tr><td>2_23</td><td>i32.const 16</td></tr>|<tr><td>2_24</td><td>i32.add</td></tr>|<tr><td>2_25</td><td>global.set 0</td></tr></table>>];
+block5 [shape=none, color=black, label=<<table><tr><td colspan="2">Control block 5</td></tr><tr><td>2_26</td><td>return</td></tr></table>>];
+block6 [shape=none, color=black, label=<<table><tr><td colspan="2">Control block 6</td></tr><tr><td>m2_6</td><td>merge</td></tr></table>>];
+block0 -> block1 [label=""];
+
+block1 -> block2 [label=""];
+
+block2 -> block3 [label=""];
+
+block3 -> block4 [label=""];
+
+block4 -> block5 [label=""];
+
+block5 -> block6 [label=""];
+
+}
