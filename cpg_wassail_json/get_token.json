@@ -1,0 +1,485 @@
+{
+  "file": "get_token.wasm",
+
+  "nodes": [
+    {
+      "id": "n1",
+      "nodeType": "METHOD",
+      "name": "get_token",
+      "code": "func $get_token",
+      "line": 1
+    },
+    {
+      "id": "n2",
+      "nodeType": "CONTROL_STRUCTURE",
+      "name": "loop",
+      "code": "loop $L4",
+      "line": 2
+    },
+    {
+      "id": "n3",
+      "nodeType": "BLOCK",
+      "name": "B5",
+      "code": "block $B5",
+      "line": 3
+    },
+
+    {
+      "id": "n4",
+      "nodeType": "CONTROL_STRUCTURE",
+      "name": "br_if",
+      "code": "br_if $B5",
+      "line": 4
+    },
+    {
+      "id": "n5",
+      "nodeType": "CALL",
+      "name": "i32.eq",
+      "code": "i32.eq",
+      "line": 5
+    },
+    {
+      "id": "n6",
+      "nodeType": "CALL",
+      "name": "local.tee",
+      "code": "local.tee $ret",
+      "line": 6
+    },
+    {
+      "id": "n7",
+      "nodeType": "CALL",
+      "name": "fgetc",
+      "code": "call $fgetc",
+      "line": 7
+    },
+    {
+      "id": "n8",
+      "nodeType": "CALL",
+      "name": "local.get",
+      "code": "local.get $pnm_file",
+      "line": 8
+    },
+    {
+      "id": "n9",
+      "nodeType": "LITERAL",
+      "name": "i32.const",
+      "code": "i32.const -1",
+      "line": 9
+    },
+
+    {
+      "id": "n10",
+      "nodeType": "CALL",
+      "name": "i32.store8",
+      "code": "i32.store8",
+      "line": 10
+    },
+    {
+      "id": "n11",
+      "nodeType": "CALL",
+      "name": "i32.add",
+      "code": "i32.add",
+      "line": 11
+    },
+    {
+      "id": "n12",
+      "nodeType": "CALL",
+      "name": "local.get",
+      "code": "local.get $token",
+      "line": 12
+    },
+    {
+      "id": "n13",
+      "nodeType": "CALL",
+      "name": "local.get",
+      "code": "local.get $i",
+      "line": 13
+    },
+    {
+      "id": "n14",
+      "nodeType": "CALL",
+      "name": "local.get",
+      "code": "local.get $ret",
+      "line": 14
+    },
+
+    {
+      "id": "n15",
+      "nodeType": "CONTROL_STRUCTURE",
+      "name": "br_if",
+      "code": "br_if $B5",
+      "line": 15
+    },
+    {
+      "id": "n16",
+      "nodeType": "CALL",
+      "name": "i32.eq",
+      "code": "i32.eq",
+      "line": 16
+    },
+    {
+      "id": "n17",
+      "nodeType": "CALL",
+      "name": "local.get",
+      "code": "local.get $ret",
+      "line": 17
+    },
+    {
+      "id": "n18",
+      "nodeType": "LITERAL",
+      "name": "i32.const",
+      "code": "i32.const 10",
+      "line": 18
+    },
+
+    {
+      "id": "n19",
+      "nodeType": "CONTROL_STRUCTURE",
+      "name": "br_if",
+      "code": "br_if $B5",
+      "line": 19
+    },
+    {
+      "id": "n20",
+      "nodeType": "CALL",
+      "name": "i32.eq",
+      "code": "i32.eq",
+      "line": 20
+    },
+    {
+      "id": "n21",
+      "nodeType": "CALL",
+      "name": "local.get",
+      "code": "local.get $ret",
+      "line": 21
+    },
+    {
+      "id": "n22",
+      "nodeType": "LITERAL",
+      "name": "i32.const",
+      "code": "i32.const 13",
+      "line": 22
+    },
+
+    {
+      "id": "n23",
+      "nodeType": "CONTROL_STRUCTURE",
+      "name": "br_if",
+      "code": "br_if $L4",
+      "line": 23
+    },
+    {
+      "id": "n24",
+      "nodeType": "CALL",
+      "name": "i32.ne",
+      "code": "i32.ne",
+      "line": 24
+    },
+    {
+      "id": "n25",
+      "nodeType": "CALL",
+      "name": "local.get",
+      "code": "local.get $ret",
+      "line": 25
+    },
+    {
+      "id": "n26",
+      "nodeType": "LITERAL",
+      "name": "i32.const",
+      "code": "i32.const 32",
+      "line": 26
+    }
+  ],
+
+  "edges": [
+    {
+      "source": "n1",
+      "target": "n2",
+      "edgeType": "AST"
+    },
+    {
+      "source": "n2",
+      "target": "n3",
+      "edgeType": "AST"
+    },
+
+    {
+      "source": "n3",
+      "target": "n4",
+      "edgeType": "AST"
+    },
+    {
+      "source": "n3",
+      "target": "n10",
+      "edgeType": "AST"
+    },
+    {
+      "source": "n3",
+      "target": "n15",
+      "edgeType": "AST"
+    },
+    {
+      "source": "n3",
+      "target": "n19",
+      "edgeType": "AST"
+    },
+    {
+      "source": "n3",
+      "target": "n23",
+      "edgeType": "AST"
+    },
+
+    {
+      "source": "n4",
+      "target": "n5",
+      "edgeType": "AST"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "edgeType": "AST"
+    },
+    {
+      "source": "n5",
+      "target": "n9",
+      "edgeType": "AST"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "edgeType": "AST"
+    },
+    {
+      "source": "n7",
+      "target": "n8",
+      "edgeType": "AST"
+    },
+
+    {
+      "source": "n10",
+      "target": "n11",
+      "edgeType": "AST"
+    },
+    {
+      "source": "n10",
+      "target": "n14",
+      "edgeType": "AST"
+    },
+    {
+      "source": "n11",
+      "target": "n12",
+      "edgeType": "AST"
+    },
+    {
+      "source": "n11",
+      "target": "n13",
+      "edgeType": "AST"
+    },
+
+    {
+      "source": "n15",
+      "target": "n16",
+      "edgeType": "AST"
+    },
+    {
+      "source": "n16",
+      "target": "n17",
+      "edgeType": "AST"
+    },
+    {
+      "source": "n16",
+      "target": "n18",
+      "edgeType": "AST"
+    },
+
+    {
+      "source": "n19",
+      "target": "n20",
+      "edgeType": "AST"
+    },
+    {
+      "source": "n20",
+      "target": "n21",
+      "edgeType": "AST"
+    },
+    {
+      "source": "n20",
+      "target": "n22",
+      "edgeType": "AST"
+    },
+
+    {
+      "source": "n23",
+      "target": "n24",
+      "edgeType": "AST"
+    },
+    {
+      "source": "n24",
+      "target": "n25",
+      "edgeType": "AST"
+    },
+    {
+      "source": "n24",
+      "target": "n26",
+      "edgeType": "AST"
+    },
+
+    {
+      "source": "n8",
+      "target": "n7",
+      "edgeType": "CFG"
+    },
+    {
+      "source": "n7",
+      "target": "n6",
+      "edgeType": "CFG"
+    },
+    {
+      "source": "n6",
+      "target": "n9",
+      "edgeType": "CFG"
+    },
+    {
+      "source": "n9",
+      "target": "n5",
+      "edgeType": "CFG"
+    },
+    {
+      "source": "n5",
+      "target": "n4",
+      "edgeType": "CFG"
+    },
+
+    {
+      "source": "n4",
+      "target": "n12",
+      "edgeType": "CFG"
+    },
+    {
+      "source": "n12",
+      "target": "n13",
+      "edgeType": "CFG"
+    },
+    {
+      "source": "n13",
+      "target": "n11",
+      "edgeType": "CFG"
+    },
+    {
+      "source": "n11",
+      "target": "n14",
+      "edgeType": "CFG"
+    },
+    {
+      "source": "n14",
+      "target": "n10",
+      "edgeType": "CFG"
+    },
+
+    {
+      "source": "n10",
+      "target": "n17",
+      "edgeType": "CFG"
+    },
+    {
+      "source": "n17",
+      "target": "n18",
+      "edgeType": "CFG"
+    },
+    {
+      "source": "n18",
+      "target": "n16",
+      "edgeType": "CFG"
+    },
+    {
+      "source": "n16",
+      "target": "n15",
+      "edgeType": "CFG"
+    },
+
+    {
+      "source": "n15",
+      "target": "n21",
+      "edgeType": "CFG"
+    },
+    {
+      "source": "n21",
+      "target": "n22",
+      "edgeType": "CFG"
+    },
+    {
+      "source": "n22",
+      "target": "n20",
+      "edgeType": "CFG"
+    },
+    {
+      "source": "n20",
+      "target": "n19",
+      "edgeType": "CFG"
+    },
+
+    {
+      "source": "n19",
+      "target": "n25",
+      "edgeType": "CFG"
+    },
+    {
+      "source": "n25",
+      "target": "n26",
+      "edgeType": "CFG"
+    },
+    {
+      "source": "n26",
+      "target": "n24",
+      "edgeType": "CFG"
+    },
+    {
+      "source": "n24",
+      "target": "n23",
+      "edgeType": "CFG"
+    },
+
+    {
+      "source": "n23",
+      "target": "n2",
+      "edgeType": "CFG"
+    },
+
+    {
+      "source": "n6",
+      "target": "n14",
+      "edgeType": "REACHING_DEF"
+    },
+    {
+      "source": "n6",
+      "target": "n17",
+      "edgeType": "REACHING_DEF"
+    },
+    {
+      "source": "n6",
+      "target": "n21",
+      "edgeType": "REACHING_DEF"
+    },
+    {
+      "source": "n6",
+      "target": "n25",
+      "edgeType": "REACHING_DEF"
+    },
+
+    {
+      "source": "n4",
+      "target": "n10",
+      "edgeType": "CDG"
+    },
+    {
+      "source": "n15",
+      "target": "n19",
+      "edgeType": "CDG"
+    },
+    {
+      "source": "n19",
+      "target": "n23",
+      "edgeType": "CDG"
+    }
+  ]
+}
