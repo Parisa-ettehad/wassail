@@ -1,95 +1,142 @@
 {
-  "name": "CFG of function 2",
-  "directed": true,
-  "strict": false,
-  "_subgraph_cnt": 0,
-  "objects": [
+  "file": "get_token.wasm",
+  "method": "get_token",
+
+
+  "nodes": [
     {
-      "_gvid": 0,
-      "name": "block0",
-      "color": "black",
-      "label": "<table><tr><td colspan=\"2\">Data block 0<\/td><\/tr><tr><td>2_0<\/td><td>global.get 0<\/td><\/tr>|<tr><td>2_1<\/td><td>i32.const 16<\/td><\/tr>|<tr><td>2_2<\/td><td>i32.sub<\/td><\/tr>|<tr><td>2_3<\/td><td>local.set 0<\/td><\/tr>|<tr><td>2_4<\/td><td>local.get 0<\/td><\/tr>|<tr><td>2_5<\/td><td>global.set 0<\/td><\/tr>|<tr><td>2_6<\/td><td>local.get 0<\/td><\/tr>|<tr><td>2_7<\/td><td>i32.const 100<\/td><\/tr><\/table>",
-      "shape": "none"
+      "id": "n1",
+      "nodeType": "METHOD",
+      "name": "get_token",
+      "code": "func $get_token",
+      "order": 1
     },
     {
-      "_gvid": 1,
-      "name": "block1",
-      "color": "black",
-      "label": "<table><tr><td colspan=\"2\">Call block 1<\/td><\/tr><tr><td>2_8<\/td><td>call 0<\/td><\/tr><\/table>",
-      "shape": "none"
+      "id": "n2",
+      "nodeType": "CONTROL_STRUCTURE",
+      "name": "loop",
+      "code": "loop $L4",
+      "order": 1
     },
     {
-      "_gvid": 2,
-      "name": "block2",
-      "color": "black",
-      "label": "<table><tr><td colspan=\"2\">Data block 2<\/td><\/tr><tr><td>2_9<\/td><td>i32.store offset=12<\/td><\/tr>|<tr><td>2_10<\/td><td>local.get 0<\/td><\/tr>|<tr><td>2_11<\/td><td>i32.load offset=12<\/td><\/tr><\/table>",
-      "shape": "none"
+      "id": "n3",
+      "nodeType": "BLOCK",
+      "name": "B5",
+      "code": "block $B5",
+      "order": 1
     },
     {
-      "_gvid": 3,
-      "name": "block3",
-      "color": "black",
-      "label": "<table><tr><td colspan=\"2\">Call block 3<\/td><\/tr><tr><td>2_12<\/td><td>call 1<\/td><\/tr><\/table>",
-      "shape": "none"
+      "id": "n4",
+      "nodeType": " CALL",
+      "name": "local.get",
+      "code": "local.get $pnm_file",
+      "order": 1,
+      "typefullName": "i32"
     },
     {
-      "_gvid": 4,
-      "name": "block4",
-      "color": "black",
-      "label": "<table><tr><td colspan=\"2\">Data block 4<\/td><\/tr><tr><td>2_13<\/td><td>local.get 0<\/td><\/tr>|<tr><td>2_14<\/td><td>i32.load offset=12<\/td><\/tr>|<tr><td>2_15<\/td><td>local.set 1<\/td><\/tr>|<tr><td>2_16<\/td><td>i32.const 100<\/td><\/tr>|<tr><td>2_17<\/td><td>local.set 2<\/td><\/tr>|<tr><td>2_18<\/td><td>local.get 1<\/td><\/tr>|<tr><td>2_19<\/td><td>i32.const 65<\/td><\/tr>|<tr><td>2_20<\/td><td>local.get 2<\/td><\/tr>|<tr><td>2_21<\/td><td>memory.fill<\/td><\/tr>|<tr><td>2_22<\/td><td>local.get 0<\/td><\/tr>|<tr><td>2_23<\/td><td>i32.const 16<\/td><\/tr>|<tr><td>2_24<\/td><td>i32.add<\/td><\/tr>|<tr><td>2_25<\/td><td>global.set 0<\/td><\/tr><\/table>",
-      "shape": "none"
+      "id": "n5",
+      "nodeType": " CALL",
+      "name": "call",
+      "code": "call $$fgetc",
+      "order": 2,
+      "typefullName": "i32"
     },
     {
-      "_gvid": 5,
-      "name": "block5",
-      "color": "black",
-      "label": "<table><tr><td colspan=\"2\">Control block 5<\/td><\/tr><tr><td>2_26<\/td><td>return<\/td><\/tr><\/table>",
-      "shape": "none"
+      "id": "n6",
+      "nodeType": " CALL",
+      "name": "local.tee",
+      "code": "local.tee $ret",
+      "order": 3,
+      "typefullName": "i32"
     },
     {
-      "_gvid": 6,
-      "name": "block6",
-      "color": "black",
-      "label": "<table><tr><td colspan=\"2\">Control block 6<\/td><\/tr><tr><td>m2_6<\/td><td>merge<\/td><\/tr><\/table>",
-      "shape": "none"
+      "id": "n7",
+      "nodeType": "LITERAL",
+      "code": "i32.const -1",
+      "order": 4,
+      "typefullName": "i32"
+    },    
+    {
+      "id": "n8",
+      "nodeType": " CALL",
+      "name": "i32.eq",
+      "code": "i32.eq",
+      "order": 5,
+      "typefullName": "i32"
+    },   
+
+    {
+      "id": "n9",
+      "nodeType": "CONTROL_STRUCTURE",
+      "name": "br_if",
+      "code": "br_if $B5",
+      "order": 6
     }
   ],
+
   "edges": [
     {
-      "_gvid": 0,
-      "tail": 0,
-      "head": 1,
-      "label": ""
+      "source": "n1",
+      "target": "n2",
+      "edgeType": "AST"
     },
     {
-      "_gvid": 1,
-      "tail": 1,
-      "head": 2,
-      "label": ""
+      "source": "n2",
+      "target": "n3",
+      "edgeType": "AST"
     },
     {
-      "_gvid": 2,
-      "tail": 2,
-      "head": 3,
-      "label": ""
+      "source": "n3",
+      "target": "n4",
+      "edgeType": "AST"
     },
     {
-      "_gvid": 3,
-      "tail": 3,
-      "head": 4,
-      "label": ""
+      "source": "n3",
+      "target": "n5",
+      "edgeType": "AST"
     },
     {
-      "_gvid": 4,
-      "tail": 4,
-      "head": 5,
-      "label": ""
+      "source": "n3",
+      "target": "n6",
+      "edgeType": "AST"
+    },
+
+    {
+      "source": "n4",
+      "target": "n5",
+      "edgeType": "CFG"
     },
     {
-      "_gvid": 5,
-      "tail": 5,
-      "head": 6,
-      "label": ""
+      "source": "n5",
+      "target": "n6",
+      "edgeType": "CFG"
+    },
+    {
+      "source": "n6",
+      "target": "n7",
+      "edgeType": "CFG"
+    },
+    {
+      "source": "n7",
+      "target": "n8",
+      "edgeType": "CFG"
+    },
+    {
+      "source": "n8",
+      "target": "n9",
+      "edgeType": "CFG"
+    },
+    {
+      "source": "n5",
+      "target": "n6",
+      "edgeType": "REACHING_DEF",
+      "variable": "$ret"
+    },
+    {
+      "source": "n8",
+      "target": "n9",
+      "edgeType": "CDG",
+      "branch": "true"
     }
   ]
 }
