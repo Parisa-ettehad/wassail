@@ -349,7 +349,6 @@
       "target": "n4",
       "edgeType": "CFG"
     },
-
     {
       "source": "n4",
       "target": "n12",
@@ -417,7 +416,6 @@
       "target": "n19",
       "edgeType": "CFG"
     },
-
     {
       "source": "n19",
       "target": "n25",
@@ -438,13 +436,11 @@
       "target": "n23",
       "edgeType": "CFG"
     },
-
     {
       "source": "n23",
       "target": "n2",
       "edgeType": "CFG"
     },
-
     {
       "source": "n6",
       "target": "n14",
@@ -465,7 +461,6 @@
       "target": "n25",
       "edgeType": "REACHING_DEF"
     },
-
     {
       "source": "n4",
       "target": "n10",
